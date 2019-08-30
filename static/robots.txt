@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: http://www.blog.meseems.com.br/sitemap.xml
+Disallow: /ghost/
+Disallow: /p/
