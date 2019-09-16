@@ -97,10 +97,7 @@
     <a href='index.html' class='c-nav__link  c-nav__link--current '>Home</a>
   </li>
   <li class='c-nav__item'>
-    <a href='tag/meseems/index.html' class='c-nav__link '>Publicações</a>
-  </li>
-  <li class='c-nav__item'>
-    <a href='author/carolina-maran/index.html' class='c-nav__link '>Autora</a>
+    <a href='https://homolog.meseems.com.br/blog/all-posts/' class='c-nav__link '>Publicações</a>
   </li>
   <li class='c-nav__item'>
     <a href='https://meseems.com.br/' class='c-nav__link '>Acesse o MeSeems</a>
@@ -417,7 +414,7 @@
     <footer class='c-footer'>
   <div class='o-grid'>
 
-    <div class='o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m  o-grid__col--2-4-l  '>
+    <div class='o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m   o-grid__col--1-3-l '>
       <p class='c-footer__headline'>Tag</p>
 
         <ul class='c-footer-list o-plain-list'>
@@ -426,7 +423,7 @@
         </ul>
     </div>
 
-    <div class='o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m  o-grid__col--2-4-l  '>
+    <div class='o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m   o-grid__col--1-3-l '>
       <p class='c-footer__headline'>Navegação</p>
 
       <ul class='c-footer-list o-plain-list'>
@@ -434,10 +431,7 @@
     <a href='index.html' class='c-nav__link  c-nav__link--current '>Home</a>
   </li>
   <li class='c-nav__item'>
-    <a href='tag/meseems/index.html' class='c-nav__link '>Publicações</a>
-  </li>
-  <li class='c-nav__item'>
-    <a href='author/carolina-maran/index.html' class='c-nav__link '>Autora</a>
+    <a href='https://homolog.meseems.com.br/blog/all-posts/' class='c-nav__link '>Publicações</a>
   </li>
   <li class='c-nav__item'>
     <a href='https://meseems.com.br/' class='c-nav__link '>Acesse o MeSeems</a>
@@ -446,6 +440,33 @@
       </ul>
     </div>
 
+      <div class='o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-3-l'>
+        <p class='c-footer__headline'>Boletim de Notícias</p>
+
+        <form method='post' action='https://homolog.meseems.com.br/blog/subscribe/' class='c-subscribe-form'>
+  <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+  <div class='form-group '>
+    <input class="c-subscribe-form__input" type="email" name="email" placeholder="O email" />
+  </div>
+  <button class='c-subscribe-form__btn c-btn c-btn--small c-btn--full' type='submit'><span>Se inscrever</span></button>
+  
+<script>
+    (function(g,h,o,s,t){
+        var buster = function(b,m) {
+            h[o]('input.'+b).forEach(function (i) {
+                i.value=i.value || m;
+            });
+        };
+        buster('location', g.location.href);
+        buster('referrer', h.referrer);
+    })(window,document,'querySelectorAll','value');
+</script>
+
+</form>
+
+
+      </div>
 
     <div class='o-grid__col o-grid__col--full'>
       <div class='c-footer__bottom'>
