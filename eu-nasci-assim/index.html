@@ -462,6 +462,31 @@
   <script src='../assets/js/app.min.js@v=88e40f240b'></script>
   
 
-  
+  <script>
+    // By default, Ghost opens links in the existing tab. 
+    // Insert this in your Ghost code injection footer 
+    // to get all your links to open in a new tab instead!
+    $(document).ready(function() {
+        $('a[href^=http]').each(function() {
+            
+            // Get the current host and replace '.' with '\.'
+            var regex = '/' + window.location.host + '/';
+            regex = regex.replace(/\./g,'\\\.');
+            
+            // Create a regular expression to check with link's href
+            var regexp = new RegExp(regex);
+            
+            // If link is not from the current host add a jQuery on click function 
+            // to open the link in a new window/tab
+            if(!regexp.test(this.href)) {
+                $(this).click(function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    window.open(this.href, '_blank');    // Open in a new window
+                });
+            }
+        });
+    });
+</script>
 </body>
 </html>
