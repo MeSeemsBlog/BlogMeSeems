@@ -84,9 +84,6 @@
     <a href='../../index.html' class='c-nav__link '>Home</a>
   </li>
   <li class='c-nav__item'>
-    <a href='https://homolog.meseems.com.br/blog/all-posts/' class='c-nav__link '>Publicações</a>
-  </li>
-  <li class='c-nav__item'>
     <a href='https://meseems.com.br/' class='c-nav__link '>Acesse o MeSeems</a>
   </li>
 
@@ -304,9 +301,6 @@
     <a href='../../index.html' class='c-nav__link '>Home</a>
   </li>
   <li class='c-nav__item'>
-    <a href='https://homolog.meseems.com.br/blog/all-posts/' class='c-nav__link '>Publicações</a>
-  </li>
-  <li class='c-nav__item'>
     <a href='https://meseems.com.br/' class='c-nav__link '>Acesse o MeSeems</a>
   </li>
 
@@ -389,10 +383,16 @@
   
 
   <script>
-  $(document).ready(function() { 
-	$("a[href^='http']").attr("target","_blank");
-    $("a[href^='/']").attr("target","_blank");
-  });
+  $('a').each(function() {
+    var a = new RegExp('/' + window.location.host + '/');
+    if(!a.test(this.href)) {
+        $(this).click(function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            window.open(this.href, '_blank');
+        });
+    }
+});
 </script>
 </body>
 </html>
