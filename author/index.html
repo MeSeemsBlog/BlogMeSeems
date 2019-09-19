@@ -327,6 +327,17 @@
   <script src='../assets/js/app.min.js@v=e601426ccf'></script>
   
 
-  
+  <script>
+ $('a').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if(!a.test(this.href)) {
+       $(this).click(function(event) {
+           event.preventDefault();
+           event.stopPropagation();
+           window.open(this.href, '_blank');
+       });
+   }
+});
+</script>
 </body>
 </html>
